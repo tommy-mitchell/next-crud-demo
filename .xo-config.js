@@ -1,5 +1,10 @@
 export default {
-	extends: ["next", "xo-react", "plugin:@phaphoso/dprint/disable-conflict-rules"],
+	extends: [
+		"next",
+		"xo-react",
+		"plugin:tailwindcss/recommended",
+		"plugin:@phaphoso/dprint/disable-conflict-rules",
+	],
 	ignores: ["src/server/api/trpc.ts"],
 	rules: {
 		"object-shorthand": "off",
