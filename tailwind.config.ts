@@ -5,6 +5,12 @@ import { hocus } from "./tailwind.plugins.ts";
 export default {
 	content: ["./src/**/*.tsx"],
 	theme: {
+		colors: {
+			primary: "#f7cb45",
+			secondary: "#f096e3",
+			white: "#ffffff",
+			black: "#000000",
+		},
 		container: {
 			center: true,
 			padding: "15vw",
@@ -18,6 +24,12 @@ export default {
 				"screen-d": "100dvh",
 				"screen-s": "100svh",
 				"screen-l": "100lvh",
+			},
+			// BorderWidth: {
+			// 	"3": "3px",
+			// },
+			screens: {
+				xs: "480px",
 			},
 		},
 	},

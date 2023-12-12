@@ -1,6 +1,19 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from "clsx";
+import { extendTailwindMerge } from "tailwind-merge";
 import { ensureArray } from "@utils";
+
+const twMerge = extendTailwindMerge({
+	override: {
+		theme: {
+			colors: [
+				"primary",
+				"secondary",
+				"white",
+				"black",
+			],
+		},
+	},
+});
 
 export const cn = (input: ClassValue | ClassValue[], ...inputs: ClassValue[]) => (
 	twMerge(clsx(ensureArray(input), ...inputs))
@@ -16,6 +29,4 @@ export type ClassNameProp = Readonly<{
 	className?: ClassName;
 }>;
 
-export type PropsWithClassName<PropsType> = (
-	Omit<PropsType, "className"> & ClassNameProp
-);
+export type PropsWithClassName<PropsType> = Omit<PropsType, "className"> & ClassNameProp;
