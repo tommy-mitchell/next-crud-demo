@@ -17,6 +17,7 @@ export const env = createEnv({
 	 * `NEXT_PUBLIC_`.
 	 */
 	client: {
+		NEXT_PUBLIC_DEV: z.string(),
 		// NEXT_PUBLIC_CLIENTVAR: z.string(),
 	},
 
@@ -26,6 +27,7 @@ export const env = createEnv({
 	 */
 	runtimeEnv: {
 		NODE_ENV: process.env.NODE_ENV,
+		NEXT_PUBLIC_DEV: process.env.NEXT_PUBLIC_DEV,
 		// NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 	},
 	/**

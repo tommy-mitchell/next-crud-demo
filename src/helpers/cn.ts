@@ -8,6 +8,7 @@ const twMerge = extendTailwindMerge({
 			colors: [
 				"primary",
 				"secondary",
+				"tertiary",
 				"white",
 				"black",
 			],
