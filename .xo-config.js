@@ -15,6 +15,9 @@ export default {
 				pascalCase: true,
 			},
 		}],
+		"tailwindcss/no-custom-classname": ["warn", {
+			callees: ["classnames", "clsx", "ctl", "cva", "tv", "cn", "cnx"],
+		}],
 		"react/no-array-index-key": "warn",
 		"capitalized-comments": ["error", "always", {
 			ignorePattern: "dprint-ignore|pragma|ignore|prettier-ignore|webpack\\w+:|c8|type-coverage:",

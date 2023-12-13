@@ -1,7 +1,7 @@
 import React from "react";
-import type { Image as ApiImage } from "@api/routers/image.ts";
 import DisplayImage from "./DisplayImage.tsx";
 import EditImage from "./EditImage.tsx";
+import type { Image as ApiImage } from "@api/routers/image.ts";
 
 type ImageProps = ApiImage;
 

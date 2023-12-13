@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineDocumentAdd as UploadIcon, HiOutlineDocumentSearch as SearchIcon } from "react-icons/hi";
+import UploadButton from "./UploadButton.tsx";
 import Icon from "@components/Icon";
 
 type ImageControlProps = Readonly<{
@@ -14,7 +15,8 @@ export default function ImageControl({ imageFilter, setImageFilter }: ImageContr
 				<input
 					type="text"
 					className={`
-						w-full rounded-tl-lg border-2 p-2 shadow-[-4px_4px] shadow-white
+						w-full rounded-tl-lg border-2 p-2 shadow-[-4px_4px] shadow-tertiary
+					placeholder:text-gray
 						focus:outline-dashed focus:outline-offset-8 focus:outline-tertiary
 					`}
 					placeholder="Search images..."
@@ -25,20 +27,9 @@ export default function ImageControl({ imageFilter, setImageFilter }: ImageContr
 			</span>
 			{/* spacer */}
 			<span className="col-span-1 max-sm:hidden" />
-			<button
-				type="button"
-				className={`
-					col-span-1
-					flex justify-center gap-x-1
-					border-2 border-black bg-secondary
-					p-2 font-bold
-					shadow-[4px_4px] shadow-white
-					hocus:outline-dashed hocus:outline-offset-8 hocus:outline-tertiary
-					max-sm:rounded-bl-lg sm:rounded-tr-lg
-				`}
-			>
+			<UploadButton className="col-span-1">
 				Upload <Icon icon={UploadIcon} description="Upload image" />
-			</button>
+			</UploadButton>
 		</form>
 	);
 }

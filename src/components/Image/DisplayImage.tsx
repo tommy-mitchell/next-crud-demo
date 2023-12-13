@@ -18,7 +18,13 @@ export default function DisplayImage({ url, name, onEdit }: DisplayImageProps) {
 				className="aspect-video h-full w-full rounded-br-3xl rounded-tl-3xl border-8 border-white object-cover shadow-[0_0_0_3px] shadow-black"
 			/>
 			<span className="absolute bottom-2 left-2 flex gap-x-1 rounded-tr-lg bg-white pl-1 pr-3 pt-1 font-semibold text-black">
-				<Icon icon={EditIcon} description="Edit image details" as="button" onClick={onEdit} />
+				<Icon
+					icon={EditIcon}
+					description="Edit image details"
+					className="text-gray hocus:text-black"
+					as="button"
+					onClick={onEdit}
+				/>
 				{name}
 			</span>
 		</div>

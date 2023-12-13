@@ -1,16 +1,17 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import type { Config } from "tailwindcss";
+import { withUt } from "uploadthing/tw";
 import { hocus } from "./tailwind.plugins.ts";
 
-export default {
+export default withUt({
 	content: ["./src/**/*.tsx"],
 	theme: {
 		colors: {
 			primary: "#f7cb45",
 			secondary: "#f096e3",
 			tertiary: "#4e9e93",
-			white: "#ffffff",
-			black: "#000000",
+			white: "#fff",
+			black: "#000",
+			gray: "#666",
 		},
 		container: {
 			center: true,
@@ -37,4 +38,4 @@ export default {
 	plugins: [
 		hocus(),
 	],
-} satisfies Config;
+});

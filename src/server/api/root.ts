@@ -1,4 +1,4 @@
-import { postRouter } from "@api/routers/post.ts";
+import { imageRouter } from "@api/routers/image.ts";
 import { createTRPCRouter } from "@api/trpc.ts";
 
 /**
@@ -7,7 +7,7 @@ import { createTRPCRouter } from "@api/trpc.ts";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-	post: postRouter,
+	image: imageRouter,
 });
 
 // Export type definition of API

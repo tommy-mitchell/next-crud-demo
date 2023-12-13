@@ -11,6 +11,7 @@ const twMerge = extendTailwindMerge({
 				"tertiary",
 				"white",
 				"black",
+				"gray",
 			],
 		},
 	},

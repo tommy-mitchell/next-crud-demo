@@ -27,14 +27,26 @@ export default function EditImage({ url, name, onConfirm, onDelete }: EditImageP
 				onSubmit={onConfirm}
 			>
 				<div className="row-span-2 flex flex-col justify-center gap-y-4 border-r-2 border-dotted border-black pr-2">
-					<Icon icon={DeleteIcon} description="Delete image" as="button" onClick={onDelete} />
+					<Icon
+						icon={DeleteIcon}
+						description="Delete image"
+						className="text-gray hocus:text-black"
+						as="button"
+						onClick={onDelete}
+					/>
 					{/* TODO: color-tertiary */}
-					<Icon icon={CheckIcon} description="Confirm edited image details" as="button" onClick={onConfirm} />
+					<Icon
+						icon={CheckIcon}
+						description="Confirm edited image details"
+						className="text-gray hocus:text-black"
+						as="button"
+						onClick={onConfirm}
+					/>
 				</div>
 				<input
 					type="text"
 					name="image-name"
-					className="border-2 border-black px-1"
+					className="border-2 border-black px-1 focus:outline-dashed focus:outline-offset-4 focus:outline-tertiary"
 					value={imageName}
 					onChange={(event) => setImageName(event.target.value)}
 				/>
@@ -42,7 +54,7 @@ export default function EditImage({ url, name, onConfirm, onDelete }: EditImageP
 				<input
 					type="text"
 					name="image-description"
-					className="border-2 border-black px-1"
+					className="border-2 border-black px-1 focus:outline-dashed focus:outline-offset-4 focus:outline-tertiary"
 					value={imageDescription}
 					onChange={(event) => setImageDescription(event.target.value)}
 				/>
