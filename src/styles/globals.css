@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	@apply bg-primary;
+}
+
 html, body, #__next {
 	height: 100%;
 }
